@@ -11,6 +11,8 @@ module.exports = {
         const regexPassword = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,250})/
         return regexPassword.test(value)
     },
+
+        //
     validlogin: function (value) {
         const usernameRegex = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
         return usernameRegex.test(value)
