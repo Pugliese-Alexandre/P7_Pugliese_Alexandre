@@ -1,0 +1,19 @@
+
+/* Images */
+
+.logo_Groupomania {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}
+
+/* Barre de navigation */
+.navigation {
+    display: flex;
+}
+
+.navigation_menu {
+    display: flex;
+}
+

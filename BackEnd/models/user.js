@@ -40,7 +40,6 @@ User.getOne = (email, result) => {
 }
 
     // Mise à jour d'un profil utilisateur.
-
 User.update = (id, user, result) => {
     connection.query (
         "UPDATE user SET login = ?, password = ?, email = ?, birth = ?, user_city = ?, img = IFNULL(?, img) WHERE id = ?",

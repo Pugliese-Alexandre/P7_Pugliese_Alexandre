@@ -1,0 +1,118 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .log_Container {
+    position: relative;
+    width: 420px;
+    min-height: 450px;
+    height: auto;
+    max-height: 520px;
+    background-color: #ffecd7;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .tab-body {
+    position: relative;
+    display: none;
+    height: auto;
+    max-height: 320px;
+    padding: 15% 5%;
+    margin-top: 20%;
+    background-color: #fff;
+    color: #82ade6de;
+    box-shadow: 0px 5px 10px #fdb301;
+    border-radius: 30px;
+    font-size: 1rem;
+  }
+  .tab-body.active {
+    display: block;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fdb301;
+    padding: 1.8% 0;
+    margin: 20px 0;
+  }
+  
+  .row .input {
+    width: 90%;
+    border: none;
+    outline: none;
+    color: #d48600;
+    font-weight: 550;
+    background-color: #ffecd7;
+  }
+  .input::placeholder {
+    color: black;
+  }
+  
+  .link {
+    display: inline-block;
+    font-size: 0.8em;
+    width: 100%;
+    text-decoration: none;
+    color: #fdb301;
+    text-align: right;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 120px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #fdb301;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .tab-footer {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 30px;
+    display: flex;
+  }
+  
+  .tab-link {
+    text-decoration: none;
+    color: #fdb301;
+    margin: 0 3%;
+  }
+  
+  .tab-link.active {
+    font-weight: bold;
+  }  
+
+  .register_Now {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+}
+

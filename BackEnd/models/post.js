@@ -9,13 +9,12 @@ class Post {
         this.Contenu = post.Contenu,
         this.Contenu_court = post.Contenu_court,
         this.user_id = post.user_id
-       // this.date = post.date
     }   
 }
 
 // Création d'un post
 Post.create = (newPost, result) => {
-    connection.query("INSERT INTO forum_article SET ?", newPost, (err, res) => {
+    connection.query("INSERT INTO post SET ?", newPost, (err, res) => {
         if (err) {
             console.log('error: ', err);
             result(err, null);
@@ -30,7 +29,7 @@ Post.create = (newPost, result) => {
 // Mise à jour d'un post
 Post.update = (id, post, result) => {
     connection.query (
-        "UPDATE forum_article SET title = ?, Contenu = ?, Contenu_court = ?, user_id = ? WHERE id = ?",
+        "UPDATE post SET title = ?, Contenu = ?, Contenu_court = ?, user_id = ? WHERE id = ?",
         [post.title, post.Contenu, post.Contenu_court, post.user_id, post.id],
         (err, res) => {
             if (err) {
@@ -50,7 +49,7 @@ Post.update = (id, post, result) => {
 
 // Suppression d'un post
 Post.delete = (id, result) => {
-    connection.query("DELETE FROM forum_article WHERE id = ?", id, (err, res) => {
+    connection.query("DELETE FROM post WHERE id = ?", id, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -63,7 +62,7 @@ Post.delete = (id, result) => {
             return;
         }
         
-        console.log('Article supprimé');
+        console.log('L article a été supprimé.');
         result(null, res);
     });
 };
